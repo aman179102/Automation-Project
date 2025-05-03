@@ -1,0 +1,45 @@
+{
+  "name": "instagram-meme-bot",
+  "version": "2.0.0",
+  "description": "Advanced Instagram meme bot with Pinterest scraping and Railway support",
+  "main": "app.js",
+  "scripts": {
+    "start": "node meme-poster.js",
+    "start:railway": "apt-get update && apt-get install -y chromium fonts-indic && node meme-poster.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "NODE_DEBUG=bot,instagram,puppeteer node meme-poster.js",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "logs": "tail -f bot.log"
+  },
+  "keywords": [
+    "instagram",
+    "bot",
+    "automation",
+    "memes",
+    "puppeteer",
+    "hinglish",
+    "desi-memes"
+  ],
+  "author": "Your Name",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.5.0",
+    "instagram-private-api": "^1.46.1",
+    "puppeteer": "^21.7.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "puppeteer-extra-plugin-adblocker": "^2.13.6",
+    "random-useragent": "^0.5.0",
+    "winston": "^3.11.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "railway": {
+    "postDeploy": {
+      "command": "npm run start:railway"
+    }
+  }
+}
