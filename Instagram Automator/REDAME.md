@@ -46,34 +46,36 @@ A fully automated meme-posting bot that scrapes copyright-safe memes from Pinter
 ```bash
 git clone https://github.com/yourusername/instagram-meme-bot.git
 cd instagram-meme-bot
-
+```
 
 2. Install Dependencies
+```bash
 npm install
-
+```
 3. Create a .env File
+ ```bash
 INSTA_USERNAME=your_instagram_username
 INSTA_PASSWORD=your_instagram_password
 PUPPETEER_EXECUTABLE_PATH=/path/to/your/chromium (optional)
-
+```
 🧪 Run the Bot
 
 node meme-poster.js
 
 The bot will:
 
-    Scrape a meme
+Scrape a meme
 
-    Download the image
+Download the image
 
-    Post it to Instagram
+Post it to Instagram
 
-    Wait 40–120 mins and repeat
+Wait 40–120 mins and repeat
 
 ⚠️ Disclaimer
 
-    This project is intended for educational purposes only.
-    Use responsibly and avoid violating any platform’s terms of service.
+This project is intended for educational purposes only.
+Use responsibly and avoid violating any platform’s terms of service.
 
 🌟 Like This Project?
 
